@@ -6,12 +6,29 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 09:31:34 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/25 15:31:14 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/29 09:01:23 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
+
+int	ft_list_min(t_list **list)
+{
+	t_list	*tmp;
+	int	res;
+
+	tmp = *list;
+	res = tmp->i;
+	tmp = tmp->next;
+	while (tmp)
+	{
+		if (res > tmp->i)
+			res = tmp->i;
+		tmp = tmp->next;
+	}
+	return (res);
+}
 
 int	check_sort(t_list **list)
 {
@@ -47,7 +64,11 @@ void	ft_read_sort(t_list **list_a, int len)
 			ft_sa(list_a);
 		else if (len == 3)
 			ft_len3(list_a, &list_b);
-	//	else if (len == 4)
-			//ft_len4(list_a, list_b);
+		else if (len == 4)
+			ft_len4(list_a, &list_b);
+		else if (len == 5)
+			ft_len5(list_a, &list_b);
+		else if (len == 6)
+			ft_len6(list_a, &list_b);
 	}
 }

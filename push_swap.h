@@ -6,7 +6,7 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 09:26:52 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/25 15:28:55 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/29 09:00:26 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ t_list  *ft_last_list(t_list **list);
 t_list  *ft_read_struct(int *tab, int len);
 
 /////  SORT  /////
+int ft_list_min(t_list **list);
 int check_sort(t_list **list);
-t_list  *ft_dupl_tab(int len);
 t_list  *ft_before_last_list(t_list **list);
 void    ft_read_sort(t_list **list_a, int len);
 
@@ -54,6 +54,26 @@ void    ft_read_sort(t_list **list_a, int len);
 void    ft_2(t_list **list_a, t_list **list_b);
 void    ft_5(t_list **list_a);
 void    ft_len3(t_list **list_a, t_list **list_b);
+
+/////  SORT 4  /////
+void    ft_4_1(t_list **list_a, t_list **list_b);
+void    ft_4_2(t_list **list_a, t_list **list_b);
+void    ft_4_3(t_list **list_a, t_list **list_b);
+void    ft_4_4(t_list **list_a, t_list **list_b);
+void    ft_len4(t_list **list_a, t_list **list_b);
+
+/////  SORT 5  /////
+void    ft_5_3(t_list **list_a, t_list **list_b);
+void    ft_5_4(t_list **list_a, t_list **list_b);
+void    ft_5_5(t_list **list_a, t_list **list_b);
+void    ft_len5(t_list **list_a, t_list **list_b);
+
+/////  SORT 6  /////
+void    ft_6_3(t_list **list_a, t_list **list_b);
+void    ft_6_4(t_list **list_a, t_list **list_b);
+void    ft_6_5(t_list **list_a, t_list **list_b);
+void    ft_6_6(t_list **list_a, t_list **list_b);
+void    ft_len6(t_list **list_a, t_list **list_b);
 
 /////  OPERATIONS  /////
 void    ft_sa(t_list **list);
