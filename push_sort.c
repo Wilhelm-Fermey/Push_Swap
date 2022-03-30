@@ -6,17 +6,16 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 09:31:34 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/29 12:23:38 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/30 10:53:47 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 int	ft_list_min(t_list **list)
 {
 	t_list	*tmp;
-	int	res;
+	int		res;
 
 	tmp = *list;
 	res = tmp->i;
@@ -32,8 +31,8 @@ int	ft_list_min(t_list **list)
 
 int	check_sort(t_list **list)
 {
-	int	j;
-	t_list *tmp;
+	int		j;
+	t_list	*tmp;
 
 	j = 0;
 	tmp = *list;

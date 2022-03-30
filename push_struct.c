@@ -6,12 +6,11 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 08:39:38 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/25 14:27:50 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/30 10:54:00 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 t_list	*add_struct(int content)
 {

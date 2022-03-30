@@ -6,7 +6,7 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 10:46:49 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/25 09:56:31 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/30 10:52:38 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_sa(t_list **list)
 
 void	ft_ra(t_list **list)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = *list;
 	*list = (*list)->next;

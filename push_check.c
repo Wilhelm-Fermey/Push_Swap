@@ -6,7 +6,7 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 09:10:09 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/18 10:54:06 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/30 14:59:05 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,25 +68,24 @@ int	*ft_check(int len, char **str)
 {
 	int	*tab;
 	int	i;
-	int	y;
 
 	i = 0;
-	y = 1;
 	tab = malloc(len);
-	while (str[y])
+	while (str[i +1])
 	{
-		tab[i] = ft_atoi(str[y]);
-		if (ft_check_num(str[y]) || ft_check_tab_max(tab[i], str[y]))
+		tab[i] = ft_atoi(str[i +1]);
+		if (ft_check_num(str[i +1]) || ft_check_tab_max(tab[i], str[i +1]))
 		{
-			write(1, "Error\n", 6);
+			write(2, "Error\n", 6);
+			free(tab);
 			return (NULL);
 		}
 		i++;
-		y++;
 	}
 	if (ft_check_same(len, tab))
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
+		free(tab);
 		return (NULL);
 	}
 	return (tab);
@@ -104,14 +103,16 @@ int	*ft_check2(int len, char **str)
 		tab[i] = ft_atoi(str[i]);
 		if (ft_check_num(str[i]) || ft_check_tab_max(tab[i], str[i]))
 		{
-			write(1, "Error\n", 6);
+			write(2, "Error\n", 6);
+			free(tab);
 			return (NULL);
 		}
 		i++;
 	}
 	if (ft_check_same(len, tab))
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
+		free(tab);
 		return (NULL);
 	}
 	return (tab);

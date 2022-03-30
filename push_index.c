@@ -6,7 +6,7 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 16:29:00 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/29 16:32:07 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/30 10:53:06 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	indexlist(t_list **list_a)
 {
 	t_list	*tmp;
 	t_list	*tmp2;
-	int 	i;
+	int		i;
 	int		index;
 
 	tmp = *list_a;

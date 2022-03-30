@@ -6,25 +6,36 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 09:29:41 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/25 13:49:46 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/30 15:02:01 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-#include <stdio.h>
 
 int	ft_tablen(char **tab)
 {
 	int	i;
 
 	i = 0;
-	while(tab[i])
+	while (tab[i])
 		i++;
 	return (i);
 }
 
-int	*ft_read(int argc, char **argv, int *res) // regarde si arg " " ou plusieurs.
+void	ft_freemalloc(t_list **list)
+{
+	t_list	*tmp;
+
+	while (*list)
+	{
+		tmp = *list;
+		*list = (*list)->next;
+		free(tmp);
+	}
+	free(*list);
+}
+
+int	*ft_read(int argc, char **argv, int *res)
 {
 	char	**str;
 	int		*tab;
@@ -65,10 +76,6 @@ int	main(int argc, char **argv)
 			ft_read_sort(&list, len);
 		}
 	}
-
-	while (list)
-	{
-		printf("%d\n", list->i);
-		list = list->next;
-	}
+	free(tab);
+	ft_freemalloc(&list);
 }

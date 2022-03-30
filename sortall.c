@@ -6,7 +6,7 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:09:24 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/30 10:43:54 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/30 11:08:12 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,10 @@ int	ft_get_bits(int num)
 	int	i;
 
 	i = 31;
-	while ((num>>i) != 1)
+	while ((num >> i) != 1)
 		i--;
 	return (i);
 }
-
-
 
 void	sort_unite(t_list **list_a, t_list **list_b, int j, int len)
 {
@@ -48,7 +46,7 @@ void	ft_sortall(t_list **list_a, t_list **list_b, int len)
 	indexlist(list_a);
 	j = 0;
 	len_bit = ft_get_bits(len -1);
-	while (j <= len_bit)  // nombre d'unite de bits  (ex :3)
+	while (j <= len_bit)
 	{
 		sort_unite(list_a, list_b, j, len);
 		while (*list_b)
