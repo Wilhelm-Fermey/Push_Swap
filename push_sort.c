@@ -6,7 +6,7 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 09:31:34 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/29 09:01:23 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/29 12:23:38 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,7 @@ void	ft_read_sort(t_list **list_a, int len)
 			ft_len5(list_a, &list_b);
 		else if (len == 6)
 			ft_len6(list_a, &list_b);
+		else
+			ft_sortall(list_a, &list_b, len);
 	}
 }

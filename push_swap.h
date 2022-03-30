@@ -6,7 +6,7 @@
 /*   By: wfermey <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 09:26:52 by wfermey           #+#    #+#             */
-/*   Updated: 2022/03/29 09:00:26 by wfermey          ###   ########.fr       */
+/*   Updated: 2022/03/30 09:28:14 by wfermey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct s_list t_list;
 struct s_list
 {
 	int		i;
+	int		index;
 	t_list	*next;
 };
 
@@ -74,6 +75,15 @@ void    ft_6_4(t_list **list_a, t_list **list_b);
 void    ft_6_5(t_list **list_a, t_list **list_b);
 void    ft_6_6(t_list **list_a, t_list **list_b);
 void    ft_len6(t_list **list_a, t_list **list_b);
+
+////  SORT ALL  ////
+int ft_get_bits(int num);
+void    sort_unite(t_list **list_a, t_list **list_b, int j, int len);
+void    ft_sortall(t_list **list_a, t_list **list_b, int len);
+
+/////  PUSH INDEX  /////
+void    ft_index(t_list **list_a, int i, int index);
+void    indexlist(t_list **list_a);
 
 /////  OPERATIONS  /////
 void    ft_sa(t_list **list);
