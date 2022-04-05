@@ -1,5 +1,5 @@
 #   Push_Swap
 ##  Description
 
-📍  This project asks you to sort data on a stack, with a limited set of instructions, in as few moves as possible. To succeed, you will have to manipulate  different sorting algorithms and choose the most appropriate solution(s) for an optimized sorting of the data.
+📍  This project involves sorting data on a stack, with a limited set of instructions, and the smallest number of moves. To make this happen, we have to manipulate various sorting algorithms and choose the most appropriate solution for optimized data sorting.
 📘 📊
